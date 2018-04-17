@@ -44,8 +44,8 @@
   :link '(url-link "http://github.com/martinbalfanz/org-auto-save"))
 
 (defcustom org-auto-save-triggers
-  '("org-agenda-todo" "org-agenda-priority"
-    "org-refile" "org-schedule" "org-deadline" "org-set-tags")
+  '("org-agenda-todo" "org-agenda-priority" "org-agenda-set-tags"
+    "org-refile" "org-schedule" "org-deadline" "org-set-tags" "org-todo" "org-set-effort")
   "A list of commands which trigger `org-auto-save-command'."
   :group 'org-auto-save
   :type '(repeat string))
