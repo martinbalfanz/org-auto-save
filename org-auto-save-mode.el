@@ -43,9 +43,6 @@
   :group 'convenience
   :link '(url-link "http://github.com/martinbalfanz/org-auto-save"))
 
-(defvar org-auto-save-mode-map (make-sparse-keymap)
-  "org-autosave mode's keymap.")
-
 (defcustom org-auto-save-triggers
   '("org-agenda-todo" "org-agenda-priority"
     "org-refile" "org-schedule" "org-deadline" "org-set-tags")
@@ -73,7 +70,6 @@
 (define-minor-mode org-auto-save-mode
   "A minor mode that saves your org buffers when you run common org commands."
   :lighter " org-auto-save"
-  :keymap org-auto-save-mode-map
   :group 'org-auto-save
   (cond
    (org-auto-save-mode (org-auto-save-advice-trigger-commands))
